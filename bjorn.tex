@@ -1,0 +1,165 @@
+% resume.tex
+% vim:set ft=tex spell:
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.5in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{mdwlist}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+% and the actual content starts here
+\begin{document}
+
+\begin{center}
+{\Huge \textbf{Bjørn Westergard}}
+\vspace{.8em}
+
+1329 14\textsuperscript{th} Street NW \ \ {$\cdot$}
+\ \ Washington, D.C. 20005
+\\
+(202) 758-7332\ \ {$\cdot$}
+bjornw@gmail.com {$\cdot$}
+github.com/bwestergard
+\end{center}
+
+\begin{center}
+\hrule
+\vspace{-0.4em}
+\subsection*{Experience}
+\end{center}
+
+\begin{itemize}
+	\parskip=0.1em
+	\item[]
+	\headerrow
+		{\textbf{NGP VAN}}
+		{\textbf{Washington, D.C.}}
+	\\
+	\headerrow
+		{\emph{Software Engineer}}
+		{\emph{July 2011 -- Present}}
+	\begin{itemize*}
+		\item Currently developing a Node/Backbone petition application that contacts all of one's elected representatives in a single step with only a provided address. Message delivery by browser emulation and email scales with RabbitMQ and AWS Elastic Beanstalk.
+		\item Proposed and prototyped political supporter identity matching API built atop a Neo4j graph database, now in production.
+    \item Wrote ``supercookie'' service using Node/MongoDB to retain user information across domains, dramatically improving conversion rates and providing a comprehensive view of supporter engagement.
+		\item Developed Drupal-based Social Organizing application, through which supporters can match Facebook friends to the national voter file, information used by clients for micro-targeting. Forked codebase to experiment with shifting business logic to the client side, an approach subsequently adopted by the team.
+		\item Products contributed to are in use by hundreds of Democratic Party, AFL-CIO, and non-profit campaigns, scaling to election season loads by means of Amazon's cloud offerings (particularly EC2, S3, DynamoDB, SQS). Work was carried out in teams of two to five following a SCRUM process with extensive automated testing, with each developer contributing to the full stack.
+	\end{itemize*}
+
+	\item[]
+	\headerrow
+		{\textbf{Cubewano}}
+		{\textbf{Birmingham, England}}
+	\\
+	\headerrow
+		{\emph{Software Engineer}}
+		{\emph{2010}}
+	\begin{itemize*}
+		\item Worked on shop floor with engineers and mechanics to develop a software dashboard to visualize and log measurements taken with the company's bespoke engine test apparatus (dynamometric).
+		\item Visualizations implemented with Java (Processing.org libraries). Made modifications to a Python driver for real-time instrumentation readings.
+	\end{itemize*}
+
+	\item[]
+	\headerrow
+		{\textbf{Aurora Flight Sciences}}
+		{\textbf{Manassas, Virginia}}
+	\\
+	\headerrow
+		{\emph{Software Engineering Intern}}
+		{\emph{Summers 2005, 2006}}
+	\begin{itemize*}
+		\item Wrote Perl backend for browser-based application used by engineers to examine salient datastreams generated during Unmanned Aerial Vehicle test flights. Wrote Python utility to plot annoted flight paths in Google Earth.
+	\end{itemize*}
+
+\end{itemize}
+
+\begin{center}
+\hrule
+\subsection*{Tools}
+\end{center}
+
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+\begin{description*}
+	\item[Languages:]
+		JavaScript, Python, C$^\sharp$, Java, PHP, Perl, SuperCollider, Scheme
+	\item[Frameworks:] Express, Drupal, Django, Backbone, Angular, .NET MVC 4, NServiceBus
+	\item[Data Stores:] MongoDB, Redis, MySQL, PostgreSQL (acquaintance with PostGIS), DynamoDB, S3, Neo4j
+	\item[Cloud Environments:] Heroku, Amazon EC2
+	\item[Developer Tools:] Git, Mocha (Proxyquire/Sinon), Browserify, PhantomJS, Selenium
+\end{description*}
+\end{indentsection}
+
+\begin{center}
+\hrule
+\vspace{-0.4em}
+\subsection*{Hobbies}
+\end{center}
+
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+\begin{description*}
+	\item[HacDC:]
+	Helped organize the D.C. area's first ``hacker space'' in 2008. Have since lead well-attended workshops on audio-visual art with Processing and SuperCollider and a group study of the functional programming classic, {\emph{The Structure and Interpretation of Computer Programs}}. Frequent participant in amateur-radio ``spaceblimp'' launches and weekly Micro-controller Mondays meetups.
+	\item[AirPhotosLive:]
+	Technical contributions to launch systems and imaging payloads in family's aerial photography enterprise.
+\end{description*}
+\end{indentsection}
+
+\begin{center}
+\hrule
+\vspace{-0.4em}
+\subsection*{Education}
+\end{center}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item[]
+	\headerrow
+		{\textbf{Northern Virginia Community College}}
+		{\textbf{Arlington, Virginia}}
+	\\
+	\headerrow
+		{\emph{Courses in Mathematics, Computer Science}}
+		{\emph{2008 -- 2011}}
+	\begin{itemize*}
+		\item Calculus (3 semesters, through multi-variable), Discrete Mathematics, Linear Algebra
+		\item Objected Oriented Programming (Java), Assembly (x86), Data Structures
+		\item Circuits (Analog), Digital Design, General University Physics (two semesters) 
+	\end{itemize*}
+
+\end{itemize}
+
+\end{document}
