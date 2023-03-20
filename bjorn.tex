@@ -62,6 +62,21 @@
 \begin{itemize}
 	\parskip=0.1em
 
+        \item[]
+	      \headerrow
+	      {\textbf{Megaphone (Panoply)}}
+	      {\textbf{Washington, D.C.}}
+	      \\
+	      \headerrow
+	      {\emph{Senior Software Engineer}}
+	      {\emph{March 2018 -- June 2019}}
+	      \begin{itemize*}
+	      \item Worked with another engineer to design and implement a new podcast listenership data pipeline that could handle an order of magnitude increase in download volume. Built around Druid (a timeseries database), we also made extensive use of Terraform, Google Dataflow (Apache Beam, Java), and Cloud Functions (Node).
+              \item Developed and implemented a method for forecasting podcast downloads by demographic and geographic segment using historical data from aforesaid pipeline, enabling users to estimate advertising inventory months in advance (Node, Flow, Postgres).   
+              \item Forked the open source Turnilo project (Typescript) to integrate it with our Ruby on Rails application by means of JSON Web Tokens, such that users could run arbitrary Druid queries within those subsets of the data they were authorized to view.
+                \item Added features to our Ruby on Rails application with React and gave brownbag talks on JavaScript best practices.
+	      \end{itemize*}
+        
 	\item[]
 	      \headerrow
 	      {\textbf{Lanetix}}
@@ -71,8 +86,8 @@
 	      {\emph{Senior Software Engineer}}
 	      {\emph{October 2015 -- January 2018}}
 	      \begin{itemize*}
-	      	\item Technical lead of a three person team which developed a plugin platform and marketplace. Built atop AWS Lambda, DynamoDB, SNS and PostgreSQL with a React UI, this system was used to automate business processes for more than a dozen clients.
-					\item Named as first inventor on a patent application sought by Lanetix, Inc. in connection with this work, \textit{Systems and Methods for Data Translation between Non-Homogenous Datastores} (filed January 31, 2018).
+	      	\item Technical lead of a three person team which developed a plugin platform for the flagship logistics CRM product. Built atop AWS Lambda, DynamoDB, SNS and Postgres with a React UI, this system was used to automate business processes for more than a dozen clients.
+					\item Named as first inventor on a patent application drafted by Lanetix, Inc. in connection with this work, \textit{Systems and Methods for Data Translation between Non-Homogenous Datastores}.
 	      \end{itemize*}
 
 	\item[]
@@ -84,7 +99,7 @@
 	      {\emph{Senior Software Engineer}}
 	      {\emph{April 2015 -- October 2015}}
 	      \begin{itemize*}
-	      	\item Sole engineer working alongside founders to implement unified inventory, ecommerce, and delivery system with Node, React, PostgreSQL (PostGIS). This system freed the management team to experiment with different delivery mechanisms within and between cities as the business grew.
+	      	\item Sole engineer working alongside founders to implement unified inventory, e-commerce, and delivery system with Node, React, Postgres (PostGIS). This system freed the management team to experiment with different delivery mechanisms within and between cities as the business grew.
 	      	\item Surveyed academic literature and collaborated with distribution staff to write software suited to the unique operational challenge of offering same-day delivery of a highly perishable good (bouquets).
 	      \end{itemize*}
 
@@ -98,20 +113,7 @@
 	      {\emph{July 2011 -- April 2015}}
 	      \begin{itemize*}
 	      	\item Worked on small team to develop a Node/Backbone/PhantomJS "Advocacy" application by means of which all of one's elected representatives can be contacted through a single form.
-	      	\item Contributed to ``supercookie'' service using Node/MongoDB to retain user information across domains, dramatically improving conversion rates and providing a comprehensive view of supporter engagement.
 	      	\item Major contributor to Social Organizing application (Drupal/Backbone), through which supporters can match Facebook friends to the national voter file enabling clients to micro-target supporters.
-	      \end{itemize*}
-
-	\item[]
-	      \headerrow
-	      {\textbf{Cubewano}}
-	      {\textbf{Birmingham, England}}
-	      \\
-	      \headerrow
-	      {\emph{Software Engineer}}
-	      {\emph{2010}}
-	      \begin{itemize*}
-	      	\item Worked on shop floor with engineers and mechanics to develop a software dashboard to visualize (Java/Processing) and log measurements taken with the company's bespoke dynamometric apparatus. Modified Python driver for real-time instrumentation readings.
 	      \end{itemize*}
 
 \end{itemize}
@@ -125,10 +127,10 @@
 	\hyphenpenalty=1000
 	\begin{description*}
 		\item[Languages:]
-		JavaScript, Python, C$^\sharp$, Java, PHP, Perl. Non-professional experience with OCaml, Scheme, SuperCollider.
+		JavaScript, Python, C$^\sharp$, Java, PHP. Limited experience with OCaml, Go, C++, Scheme, Ruby, SuperCollider, Rust.
 		\item[Frameworks:] React, Redux, Express, Drupal, Django, Backbone.
-		\item[Data Stores:] PostgreSQL (including PostGIS), MySQL, DynamoDB, MongoDB, Redis.
-		\item[DevOps:] AWS (particularly Lambda, SNS, SQS, CloudFormation), Babel, Flow, Mocha, CircleCI, Heroku, Webpack, Browserify, Chrome Headless.
+		\item[Data Stores:] PostgreSQL (including PostGIS), Druid, MySQL, DynamoDB, MongoDB, Redis.
+		\item[DevOps:] AWS (Lambda, SNS, SQS, CloudFormation), Google Cloud (Cloud Functions, Dataflow), Terraform, Babel, Flow, Mocha, CircleCI, Heroku, Webpack, Browserify, Chrome Headless.
 	\end{description*}
 \end{indentsection}
 
